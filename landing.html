@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--divinectorweb.com-->
+<!--Just testing-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Libreria</title>
+
+    <!-- All CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--Navbar papa-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a href="index.html" class="navbar-brand"> <span class="text-primary">Tu</span> Libreria</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarS"
+                aria-controls="navbarS" aria-expanded="false" aria-label="Toogle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarS">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="bookpage/addbookspage.html" class="nav-link">Agregar Tu libro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Biblioteca/Biblioteca.html" class="nav-link">Biblioteca</a>
+                    </li>
+                    <li class="nav-item text-warning">
+                        <a href="bookpage/Todolistcopy.html" class="nav-link text-info"> <strong>To Do List</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Equipo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contactos</a>
+                    </li>
+                </ul>
+                <!--Barra de busqueda -->
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" id="searchInput" type="search"
+                        placeholder="Aqui puedes buscar tus libros" aria-label="Buscar">
+                </form>
+            </div>
+            <!--Container de resultado barra de busquedas-->
+            <div class="container mt-4" <div id="resultContainer" class="collapse">
+                <h5>Resultados de la busqueda:></h5>
+                <div id="resultContent"></div>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <section id="sectiongrande">
+    <!-- El CARROUSEL PAPA -->
+    <!-- <<<BOTONES INDICADORES del Carrousel>>> -->
+    <div id="carouselE" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselE" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselE" data-bs-slide-to="1" aria-current="true"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselE" data-bs-slide-to="2" aria-current="true"
+                aria-label="Slide 3"></button>
+        </div>
+        <!-- ITEMS E IMAGENES DEL CARROUSEL -->
+        <div class="carousel-inner">
+            <!--Item 1 del carousel-->
+            <div class="carousel-item active" id="carousel1">
+                <img src="portadas/reworkdivinacomedia1.png" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                    <h5 id="titulocarousel1">La Divina Comedia</h5>
+                    <p>La Divina Comedia relata el viaje de Dante por el Infierno, el Purgatorio y el Paraíso, guiado por el poeta romano Virgilio. El poema comienza con el encuentro de Virgilio con Dante, que se ha perdido en una selva y tropieza con bestias salvajes</p>
+                    <a href="#" id="btn_carousel1" class="btn btn-primary mt-3"> Más información</a>
+                </div>
+            </div>
+            <!--Item 2 del carousel-->
+            <div class="carousel-item " id="carousel2">
+                <img src="portadas/reworkdonquijote3.png" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                    <h5>Don Quijote</h5>
+                    <p>La novela narra las aventuras de Alonso Quijano, un viejo caballero que de tanto leer historias de caballería pierde la razón y decide convertirse en caballero andante para salir a resolver problemas e impartir justicia.</p>
+                    <a href="#" id="btn_carousel2" class="btn btn-primary mt-3"> Más información</a>
+                </div>
+            </div>
+            <!--Item 3 del carousel-->
+            <div class="carousel-item " id="carousel3">
+                <img src="portadas/reworkellugar1.png" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                    <h5>El Lugar</h5>
+                    <p>Un hombre despierta en una habitación que no es la suya y cursa un calvario de intrascendencia, frialdad e incomunicación. No está en ningún lado o está en un mundo tan exageradamente contemporáneo que se desliza hacia el futuro, además de no registrar su existencia sino por medio del malentendido y la indiferencia</p>
+                    <a href="#" id="btn_carousel3" class="btn btn-primary mt-3"> Más información</a>
+                </div>
+            </div>
+            <!-- Flechitas del Carrousel -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselE" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" arial-hidden="true"></span>
+            <span class="visualle-hidden"> Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselE" data-bs-slide="next">
+            <span class="carousel-control-next-icon" arial-hidden="true"></span>
+            <span class="visualle-hidden"> Next</span>
+        </button>
+    </div>
+    <!-- Seccion de Servicios -->
+    <section class="about section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg4 col-md-12 col-12">
+                    <!-- Esto es para que sea responsivo en otros tama;os de pantalla-->
+                    <div class="about-img">
+                        <img src="img/about.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                        <div class="about-text text-white">
+                            <h2>Hoteles y playa <br>Servicios</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla natus accusamus porro
+                                voluptate quos. Reprehenderit corrupti officia nam et suscipit assumenda non voluptatem.
+                                Doloremque voluptatibus odio adipisci provident recusandae officia!</p>
+                            <a href="#" class="btn btn-primary"> Más información</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+   
+    <!-- Portfolio de Playas -->
+    <section class="Portfolio section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center text-white pb-5">
+                        <h2>Playas</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi impedit maiores pariatur
+                            repudiandae consectetur? Sapiente ad magni aspernatur. Amet aperiam laboriosam sapiente a
+                            ipsam repellendus corrupti vitae ducimus nemo inventore?</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-4">
+                        <div class="card text-light text-center bg-dark pb-2">
+                            <div class="card-body text-white">
+                                <div class="img-area mb-4">
+                                    <img src="img/project-1.jpg" class="img-fluid" alt="">
+                                </div>
+                                <h3>Playa 1</h3>
+                                <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi qui
+                                    adipisci illum voluptatibus cupiditate quo ab, doloribus fuga ipsam repellendus sint
+                                    porro beatae? Eaque eos delectus esse amet quos voluptates!</p>
+                                <button class="btn bg-primary text-white">Más información</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-4">
+                            <div class="card text-light text-center bg-dark pb-2">
+                                <div class="card-body text-white">
+                                    <div class="img-area mb-4">
+                                        <img src="img/project-2.jpg" class="img-fluid" alt="">
+                                    </div>
+                                    <h3>Playa 2</h3>
+                                    <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi
+                                        qui adipisci illum voluptatibus cupiditate quo ab, doloribus fuga ipsam
+                                        repellendus sint porro beatae? Eaque eos delectus esse amet quos voluptates!</p>
+                                    <button class="btn bg-primary text-white">Más información</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-4">
+                            <div class="card text-light text-center bg-dark pb-2">
+                                <div class="card-body text-white">
+                                    <div class="img-area mb-4">
+                                        <img src="img/project-3.jpg" class="img-fluid" alt="">
+                                    </div>
+                                    <h3>Playa 3</h3>
+                                    <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi
+                                        qui adipisci illum voluptatibus cupiditate quo ab, doloribus fuga ipsam
+                                        repellendus sint porro beatae? Eaque eos delectus esse amet quos voluptates!</p>
+                                    <button class="btn bg-primary text-white">Más información</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!--Nuestros Servicios -->
+    <section class="services section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center text-white pb-5">
+                        <h2>Nuestros Servicios</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus delectus temporibus non neque
+                            pariatur, ut quod iure alias commodi iste amet omnis quidem perspiciatis. <br> Nesciunt
+                            nihil dolorum amet nostrum placeat!</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-4 ">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-laptop"></i>
+                            <h3 class="card-title">Registro</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                            <button class="btn bg-primary text-white">Más información</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4 ">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-wifi"></i>
+                            <h3 class="card-title">Internet</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                            <button class="btn bg-primary text-white">Más información</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4 ">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-tv"></i>
+                            <h3 class="card-title">Television</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                            <button class="btn bg-primary text-white">Más información</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Asesores -->
+    <section class="team section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center text-white pb-5">
+                        <h2>Asesores</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo expedita magnam accusamus
+                            reprehenderit consectetur doloremque. Distinctio inventore impedit eligendi ex commodi amet
+                            deleniti laboriosam? Soluta error nihil quod ab molestias.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Informacion sobre nosotros -->
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card text-center bg-dark">
+                        <div class="card-body text-white">
+                            <img src="img/team-1.jpg" class="img-fluid rounded-circle" alt="">
+                            <h3 class="card-title py-2">Informacion sobre Nosotros</h3>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore blanditiis eos minima
+                                suscipit, dicta debitis numquam tenetur, illo sunt rerum, non officia. Repellat, aliquid
+                                minus? Fugit eum aut optio inventore?
+                            </p>
+                            <p class="socials">
+                                <i class="bi bi-twitter text-white mx-1"></i>
+                                <i class="bi bi-facebook text-white mx-1"></i>
+                                <i class="bi bi-linkedin text-white mx-1"></i>
+                                <i class="bi bi-instagram text-white mx-1"></i>
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+    <footer class="bg-dark p-2 text-center">
+        <div class="container">
+            <p class="text-white"> Soy el Footer, amet consectetur adipisicing elit. Quisquam numquam aut excepturi iure
+                quaerat eveniet vitae blanditiis dolorem nihil saepe iusto, provident quae? Ipsa incidunt architecto nam
+                ipsum, et modi!
+            </p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
+<!--for getting the form download the code from download button-->
