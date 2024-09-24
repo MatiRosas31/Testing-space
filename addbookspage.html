@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Just testing-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Responsive Landing Page Design</title>
+
+    <!-- All CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="cssbookpage/stylebookpage.css">
+    <!--
+    <style>
+        body {
+            background: #161815;
+        }
+
+        .section-padding {
+            padding: 20px 0;
+        }
+    </style>
+</head> -->
+
+<body>
+    <!--Navbar papa-->
+    <nav class="navbar navbar-expand-xxl navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a href="index.html" class="navbar-brand"> <span class="text-primary">Tu</span> Libreria</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarS"
+                aria-controls="navbarS" aria-expanded="false" aria-label="Toogle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarS">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item text-light">
+                        <a href="index.html" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="bookpage/addbookspage.html" class="nav-link text-light">Agregar Tu libro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Biblioteca/Biblioteca.html" class="nav-link text-light">Biblioteca</a>
+                    </li>
+                    <li class="nav-item text-warning">
+                        <a href="Todolist.html" class="nav-link text-info"> <strong>To Do List</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-light" >Equipo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-light">Contactos</a>
+                    </li>
+                </ul>
+                <!--Barra de busqueda -->
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" id="searchInput" type="search"
+                        placeholder="Aqui puedes buscar tus libros" aria-label="Buscar">
+                </form>
+            </div>
+            <!--Container de resultado barra de busquedas-->
+            <div class="container mt-4" <div id="resultContainer" class="collapse">
+                <div id="resultContent"></div>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <!--Testing space -->
+    <section class="about section-padding bg-dark">
+        <div class="container">
+            <div class="row">
+                <!-- Form Fields Section -->
+                <div class="col-lg-8 col-md-12 col-12">
+                    <div class="container mt-5">
+                        <h2 class="text-primary">Crea <span class="text-light">tu libro</span></h2>
+                        <p class="text-white-50">Aqui puedes crear tu libro. Solo completa los campos para crearlo
+                        </p>
+                        <form>
+                            <!-- Campo para el Título -->
+                            <div class="form-group">
+                                <label for="titulo" class="text-warning">Título</label>
+                                <input type="text" class="form-control" id="titulo" placeholder="Título del libro"
+                                    required>
+                            </div>
+                            <!-- Campo para el Autor -->
+                            <div class="form-group">
+                                <label for="autor" class="text-warning">Autor</label>
+                                <input type="text" class="form-control" id="autor" placeholder="Nombre del autor"
+                                    required>
+                            </div>
+                            <!-- Campo para el Año de Publicación -->
+                            <div class="form-group">
+                                <label for="anoPublicacion" class="text-warning">Año de Publicación</label>
+                                <input type="number" class="form-control" id="anoPublicacion"
+                                    placeholder="Año de publicación" required>
+                            </div>
+                            <!-- Campo para el Género -->
+                            <div class="form-group">
+                                <label for="genero" class="text-warning">Género</label>
+                                <input type="text" class="form-control" id="genero" placeholder="Género del libro"
+                                    required>
+                            </div>
+                            <!-- Campo para la Extensión -->
+                            <div class="form-group">
+                                <label for="extension" class="text-warning">Extensión (número de páginas)</label>
+                                <input type="number" class="form-control" id="extension"
+                                    placeholder="Número de páginas" required>
+                            </div>
+                            <!-- Campo para la Trama -->
+                            <div class="form-group">
+                                <label for="trama" class="text-warning">Argumento:</label>
+                                <textarea class="form-control" id="trama" rows="4"
+                                    placeholder="Descripción de la trama" required></textarea>
+                            </div>
+                            <!-- Upload Image Section -->
+                            <div class="form-group">
+                            <label for="trama" class="text-warning">Imagen de portada:</label>
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <img id='img-upload' src="path_to_default_image.jpg" />
+                                        <span class="btn btn-default btn-file">
+                                            Browse… <input type="file" id="imgInp">
+                                        </span>
+                                    </span>
+                                </div>
+                                
+                            </div>
+                            <!-- Botón de Enviar -->
+                            <button type="submit" id="enviar" class="btn btn-light">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark p-2 text-center">
+        <div class="container">
+            <p class="text-white"> Soy el Footer, amet consectetur adipisicing elit. Quisquam numquam aut excepturi iure
+                quaerat eveniet vitae blanditiis dolorem nihil saepe iusto, provident quae? Ipsa incidunt architecto nam
+                ipsum, et modi!
+            </p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="script2.js"></script>
+</body>
+
+</html>
